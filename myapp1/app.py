@@ -20,25 +20,33 @@ def shop():
             "name": "T-shirt",
             "price": 1400,
             "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat iure voluptate sint molestiae veniam nulla similique aperiam autem quaerat, reiciendis beatae! Harum, eligendi nam fuga illum excepturi maxime autem? Eligendi.",
-            "imgUrl": "https://nolson.nl/cdn/shop/files/3_4.jpg?v=1772113380"
+            "imgUrl": "https://nolson.nl/cdn/shop/files/3_4.jpg?v=1772113380",
+            "onSale" : True,
+            "isFeatured": True
         },
         {
             "name": "Jeans",
             "price": 2000,
             "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat iure voluptate sint molestiae veniam nulla similique aperiam autem quaerat, reiciendis beatae! Harum, eligendi nam fuga illum excepturi maxime autem? Eligendi.",
-            "imgUrl": "https://nolson.nl/cdn/shop/files/3_4.jpg?v=1772113380"
+            "imgUrl": "https://nolson.nl/cdn/shop/files/3_4.jpg?v=1772113380",
+            "onSale" : False,
+            "isFeatured": True
         },
         {
             "name": "Trousers",
             "price": 1800,
             "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat iure voluptate sint molestiae veniam nulla similique aperiam autem quaerat, reiciendis beatae! Harum, eligendi nam fuga illum excepturi maxime autem? Eligendi.",
-            "imgUrl": "https://nolson.nl/cdn/shop/files/3_4.jpg?v=1772113380"
+            "imgUrl": "https://nolson.nl/cdn/shop/files/3_4.jpg?v=1772113380",
+            "onSale" : False,
+            "isFeatured": False
         },
         {
             "name": "Shirt",
             "price": 1750,
             "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat iure voluptate sint molestiae veniam nulla similique aperiam autem quaerat, reiciendis beatae! Harum, eligendi nam fuga illum excepturi maxime autem? Eligendi.",
-            "imgUrl": "https://nolson.nl/cdn/shop/files/3_4.jpg?v=1772113380"
+            "imgUrl": "https://nolson.nl/cdn/shop/files/3_4.jpg?v=1772113380",
+            "onSale" : True,
+            "isFeatured": False
         }
     ]
 
