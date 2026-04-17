@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebApp - Home Page</title>
+</head>
+<body>
+    
+    <!-- <nav>
+        <ul>
+            <li><a href="http://127.0.0.1:5001/">Home</a></li>
+            <li><a href="http://127.0.0.1:5001/services">Services</a></li>
+            <li><a href="http://127.0.0.1:5001/contact">Contact</a></li>
+        </ul>
+    </nav> -->
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('services') }}">Services</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h3>Welcome to website {{visitor_name}} </h3>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore rerum sequi eveniet sed ut ea enim atque esse repudiandae molestiae tempora at dolores sint dolorum voluptates unde porro, ab laborum. dolor sit amet consectetur adipisicing elit. Inventore rerum sequi eveniet sed ut ea enim atque esse repudiandae molestiae tempora at dolores sint dolorum voluptates unde porro, ab laborum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore rerum sequi eveniet sed ut ea enim atque esse repudiandae molestiae tempora at dolores sint dolorum voluptates unde porro, ab laborum. dolor sit amet consectetur adipisicing elit. Inventore rerum sequi eveniet sed ut ea enim atque esse repudiandae molestiae tempora at dolores sint dolorum voluptates unde porro, ab laborum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore rerum sequi eveniet sed ut ea enim atque esse repudiandae molestiae tempora at dolores sint dolorum voluptates unde porro, ab laborum. dolor sit amet consectetur adipisicing elit. Inventore rerum sequi eveniet sed ut ea enim atque esse repudiandae molestiae tempora at dolores sint dolorum voluptates unde porro, ab laborum.</p>
+</body>
+</html>
