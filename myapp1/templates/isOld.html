@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <h1>Is Old?</h1>
+    
+    {% if age > 18 %}
+
+    <h4 class="display text-secondary">You are an adult</h4>
+
+    {% else %}
+
+    <h4 class="display text-info">You are a child</h4>
+
+    {% endif %}
+
+{% endblock %}
