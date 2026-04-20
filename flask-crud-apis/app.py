@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 from pymongo import MongoClient
 
 PORT=5001
@@ -9,15 +9,29 @@ db = client["maazlmsdb"]
 students_collection = db["students"]
 # teacher_collection = db["teachers"]
 
-
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    students_list = students_collection.find()
 
-@app.route("/add-student")
+    return render_template("index.html", students_list=students_list)
+
+@app.route("/add-student", methods=["GET", "POST"])
 def addstudent():
+    if request.method == "POST":
+
+        student_data = {
+            "name": request.form["name"],
+            "email": request.form["email"],
+            "contact": request.form["contact"],
+            "course": request.form["course"],
+        }
+
+        students_collection.insert_one(student_data)
+
+        return redirect(url_for("index"))
+    
     return render_template("add-student.html")
 
 

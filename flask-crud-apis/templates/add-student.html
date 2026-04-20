@@ -2,5 +2,26 @@
 
 
 {% block content %}
-this is add student
+<h3>Add Student</h3>
+<form method="post" action="{{url_for('addstudent')}}" class="mt-4">
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email">
+    </div>
+    <div class="mb-3">
+        <label for="contact" class="form-label">Contact</label>
+        <input type="text" class="form-control" id="contact" name="contact">
+    </div>
+    <div class="mb-3">
+        <label for="course" class="form-label">Course Enrolled</label>
+        <input type="text" class="form-control" id="course" name="course">
+    </div>
+
+    <button type="submit" class="btn btn-dark">Add Student</button>
+</form>
+
 {% endblock %}

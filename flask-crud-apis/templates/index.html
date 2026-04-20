@@ -2,5 +2,27 @@
 
 
 {% block content %}
-this is index
+
+<h3>Students</h3>
+<table class="table mt-4">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Contact</th>
+            <th scope="col">Course</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for student in students_list %}
+        <tr>
+            <th scope="row">{{student.name}}</th>
+            <td>{{student.email}}</td>
+            <td>{{student.contact}}</td>
+            <td>{{student.course}}</td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
 {% endblock %}
