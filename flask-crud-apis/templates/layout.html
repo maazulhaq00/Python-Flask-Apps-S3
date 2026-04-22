@@ -11,6 +11,18 @@
     
     {% include 'components/navbar.html' %}
 
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="container mt-4">
+                {% for message in messages %}
+                <div class="alert alert-success" role="alert">
+                    {{message}}
+                  </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
     <div class="container mt-4">
         {% block content %}
 

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 from pymongo import MongoClient
 from bson import ObjectId 
 
@@ -11,6 +11,7 @@ students_collection = db["students"]
 # teacher_collection = db["teachers"]
 
 app = Flask(__name__)
+app.secret_key="2309c1-ki-secret-key"
 
 @app.route("/")
 def index():
@@ -28,9 +29,9 @@ def addstudent():
             "contact": request.form["contact"],
             "course": request.form["course"],
         }
-
         students_collection.insert_one(student_data)
-
+        flash("Student Added Successfully")
+        
         return redirect(url_for("index"))
     
     return render_template("add-student.html")
@@ -48,6 +49,8 @@ def editstudent(id):
 
         students_collection.update_one({"_id": ObjectId(id)}, {"$set": updated_student_data})
 
+        flash("Student Updated Successfully")
+        
         return redirect(url_for("index"))
 
     student = students_collection.find_one({"_id": ObjectId(id)})
@@ -56,6 +59,9 @@ def editstudent(id):
 @app.route("/delete-student/<id>")
 def deletestudent(id):
     students_collection.delete_one({"_id": ObjectId(id)})
+    
+    flash("Student Deleted Successfully")
+        
     return redirect(url_for("index"))
 
 
