@@ -20,6 +20,11 @@
             <td>{{student.email}}</td>
             <td>{{student.contact}}</td>
             <td>{{student.course}}</td>
+            <td>
+                <a href="{{url_for('editstudent', id=student._id)}}">Edit</a>
+                <a href="{{url_for('deletestudent', id=student._id)}}">Delete</a>
+            </td>
+
         </tr>
         {% endfor %}
 
